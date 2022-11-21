@@ -19,7 +19,7 @@ const List = (props) => {
   return (
     <div className="search__result">
       <ul>
-        {filteredData.slice(0,10).map((item) => (
+        {filteredData.slice(0, 10).map((item) => (
           <li key={item.id}>
             <Link to={item.text}>{item.text}</Link>
           </li>

@@ -44,10 +44,10 @@ const Login = () => {
           </ul>
         </div>
         */}
-        
+
         <div className="register__section">
           Not a member?
-          <Link to="/register" className="register">
+          <Link to="/cloud13/build/register" className="register">
             register here
           </Link>
         </div>

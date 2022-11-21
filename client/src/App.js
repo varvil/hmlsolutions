@@ -14,8 +14,8 @@ function App() {
       <Routes>
         <Route path="/cloud13/build" element={<Home />} />
         <Route index element={<Home />} />
-        <Route path="login" element={<Login />} />
-        <Route path="register" element={<Register />} />
+        <Route path="/cloud13/build/login" element={<Login />} />
+        <Route path="/cloud13/build/register" element={<Register />} />
         <Route path="*" element={<Nopage />} />
       </Routes>
     </>

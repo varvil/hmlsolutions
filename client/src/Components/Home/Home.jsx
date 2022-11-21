@@ -27,7 +27,7 @@ const Home = () => {
             />
           </div>
         </div>
-        <List input={inputText}/>
+        <List input={inputText} />
       </div>
     </div>
   );

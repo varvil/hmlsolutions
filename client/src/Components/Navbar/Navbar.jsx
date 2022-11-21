@@ -11,7 +11,7 @@ const Navbar = () => {
           Home
         </Link>
 
-        <Link to="/login">
+        <Link to="/cloud13/build/login">
           <i class="uil uil-signin"></i>
           Login
         </Link>
