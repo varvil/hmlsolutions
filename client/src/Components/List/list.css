@@ -1,0 +1,30 @@
+.search__result {
+    margin: auto;
+    width: 500px;
+    height: 100px;
+    line-height: 40px;
+    transition: 0.5s;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    transition: 0.5s;
+}
+
+a {
+    text-decoration: none;
+    color: #616161;
+}
+
+a:hover {
+    color: #000;
+    transition: 0.5s;
+} 
