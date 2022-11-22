@@ -1,8 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./register.css";
+import { useState } from "react";
+import Axios from "axios";
 
 const Register = () => {
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const addUser = () => {
+    Axios.post("http://localhost:5000/register", {
+      username: username,
+      email: email,
+      password: password,
+    }).then(() => {
+      console.log("Success");
+    });
+  };
+
   return (
     <div className="register__container">
       <div className="left__content">
@@ -29,14 +45,26 @@ const Register = () => {
             type="text"
             className="register__input"
             placeholder="Username"
+            onChange={(e) => {
+              setUsername(e.target.value);
+            }}
           />
-          <input type="email" className="register__input" placeholder="Email" />
+          <input type="email" 
+          className="register__input" 
+          placeholder="Email" 
+          onChange={(e) => {
+            setEmail(e.target.value);
+          }}/>
+
           <input
             type="password"
             className="register__input"
             placeholder="Password"
+            onChange={(e) => {
+              setPassword(e.target.value);
+            }}
           />
-          <button className="register__button"> Sign up </button>
+          <button className="register__button" onClick={addUser}> Sign up </button>
         </form>
       </div>
     </div>
