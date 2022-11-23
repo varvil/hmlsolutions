@@ -1,15 +1,17 @@
 import React from "react";
 import "./home.css";
-import List from "../List/List";
+import { useEffect } from "react";
+import Axios from "axios";
 import { useState } from "react";
 
 const Home = () => {
-  const [inputText, setInputText] = useState("");
-  let inputHandler = (e) => {
-    //convert input text to lower case
-    var lowerCase = e.target.value.toLowerCase();
-    setInputText(lowerCase);
-  };
+  const [itemList, setItemList] = useState([]);
+
+  useEffect(() => {
+    Axios.get("http://localhost:5000/api/items").then((response) => {
+      setItemList(response.data);
+    });
+  }, []);
 
   return (
     <div className="home__wrapper">
@@ -19,15 +21,18 @@ const Home = () => {
           <h1 className="home__title">lorem larem</h1>
           <div className="home__search">
             <i class="uil uil-search"></i>
-            <input
-              type="text"
-              id="search__input"
-              className="text"
-              onChange={inputHandler}
-            />
+            <input type="text" id="search__input" className="text" />
           </div>
         </div>
-        <List input={inputText} />
+        {itemList.map((value) => {
+        return (
+          <div>
+            <h2>Name : {value.itemname}</h2>
+            <h3>price : {value.price}</h3>
+            <p>description : {value.description}</p>
+          </div>
+        );
+      })}
       </div>
     </div>
   );

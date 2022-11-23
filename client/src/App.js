@@ -5,6 +5,7 @@ import Register from "./Components/Register/Register";
 import Nopage from "./Components/Nopage/Nopage";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar";
+import Additem from "./Components/Additem/Additem";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path="/cloud13/build/login" element={<Login />} />
         <Route path="/cloud13/build/register" element={<Register />} />
+        <Route path="/cloud13/build/add" element={<Additem />} />
         <Route path="*" element={<Nopage />} />
       </Routes>
     </>

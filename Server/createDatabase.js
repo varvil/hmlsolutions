@@ -26,7 +26,11 @@ function createDatabase() {
 function createTables(newdb) {
     newdb.exec (`
     create table users 
-    (id INTEGER PRIMARY KEY AUTOINCREMENT, username text not null, email text not null, password text not null)
+    (id INTEGER PRIMARY KEY AUTOINCREMENT, username text NOT NULL, email text NOT NULL, password text NOT NULL)
+    `)
+    newdb.exec (`
+    create table items 
+    (id INTEGER PRIMARY KEY AUTOINCREMENT, itemname text NOT NULL, price INTEGER NOT NULL, description text NOT NULL, created text)
     `)
 };
 
