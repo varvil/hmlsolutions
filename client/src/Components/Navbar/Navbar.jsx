@@ -7,6 +7,11 @@ const Navbar = () => {
     <div className="nav__container">
       <nav className="nav__content-right">
 
+      <Link to="/cloud13/build/add">
+          <i class="uil uil-estate"></i>
+          Add item
+        </Link> 
+
         <Link to="/cloud13/build">
           <i class="uil uil-estate"></i>
           Home
@@ -17,10 +22,6 @@ const Navbar = () => {
           Login
         </Link>
 
-        <Link to="/cloud13/build/add">
-          <i class="uil uil-estate"></i>
-          Add item
-        </Link> 
       </nav>
     </div>
   );

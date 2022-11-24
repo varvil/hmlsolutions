@@ -24,15 +24,17 @@ const Home = () => {
             <input type="text" id="search__input" className="text" />
           </div>
         </div>
-        {itemList.map((value) => {
-        return (
-          <div>
-            <h2>Name : {value.itemname}</h2>
-            <h3>price : {value.price}</h3>
-            <p>description : {value.description}</p>
-          </div>
-        );
-      })}
+        <div className="item__section">
+          {itemList.map((value) => {
+            return (
+              <span className="item">
+                <h2>{value.itemname}</h2>
+                <h3>{value.price} €</h3>
+                <p>{value.description}</p>
+              </span>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

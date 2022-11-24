@@ -1,22 +1,20 @@
 .nav__container {
+    display: flex;
     width: 100%;
     height: 50px;
     background: #1abc9c;
-    margin: auto;
     line-height: 50px;
 }
 
 .nav__content-right {
-    display: flex;
-    margin-right: 15rem;
-    float: right;
-    gap: 20px;
+    margin-left: auto;
+    justify-content: flex-end;
 }
 
 .nav__content-right a {
     color: #fff;
     text-decoration: none;
-    margin: auto;
+    padding: 20px;
 }
 
 .nav__content-right a:hover {
@@ -25,4 +23,22 @@
 
 .nav__content-right i {
     margin-right: 2px;
+}
+
+/*BREAKING POINTS */
+
+@media screen and (max-width: 576px) {
+
+    .nav__container {
+        width: 100%;
+    }
+
+    .nav__content-right {
+        margin: auto;
+    }
+}
+
+/* For small devices */
+@media screen and (max-width: 350px) {
+
 }
