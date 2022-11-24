@@ -4,6 +4,7 @@ import "./navbar.css";
 
 const Navbar = () => {
   return (
+    <div className="nav__wrapper">
     <div className="nav__container">
       <nav className="nav__content-right">
 
@@ -23,6 +24,7 @@ const Navbar = () => {
         </Link>
 
       </nav>
+    </div>
     </div>
   );
 };

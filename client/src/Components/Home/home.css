@@ -109,6 +109,33 @@
 
 
  /*BREAKING POINTS */
+ @media screen and (max-width: 1024px) {
+
+    .home__section {
+        display: block;
+        justify-items: center;
+        text-align: center;
+    }
+
+    .home__content {
+        margin: 0;
+        padding: 0;
+    }
+
+    .home__title {
+        margin: 0;
+    }
+    .home__description {
+        margin: 0;
+    }
+    .home__search {
+        margin: 0;
+    }
+
+    .item__section {
+        margin: 0;
+    }
+ }
 
  @media screen and (max-width: 576px) {
 
