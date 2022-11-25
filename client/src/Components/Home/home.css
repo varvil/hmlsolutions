@@ -24,38 +24,45 @@
 }
 
 .item__section span {
-    background: #e9e9e9;
-    aspect-ratio: 2/1;
-    width: 150px;
+    background: #fefefe;
+    width: 200px;
+    height: 150px;
     border-radius: 25px;
     text-align: center;
-    padding: 5px;
-    cursor: pointer;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
     transition: 500ms;
 }
 
 .item__section span:hover {
     transition: 500ms;
-    background-color: #1abc9c;
-    width: 160px;
 }
 
 .item__section h2 {
     font-size: 15px;
-    margin: 0;
-    padding: 10px;
 }
 
 .item__section h3 {
-    padding: 0;
-    margin: 0;
+    margin-bottom: 2rem;
     font-size: 15px;
     font-weight: lighter;
 }
 
 .item__section p {
     margin-top: 1rem;
-    font-size: 10px;
+    font-size: 12px;
+}
+
+.buy {
+    display: inline-block;
+    width: 100px;
+    padding: 7px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #FFFF;
+    background: #1abc9c;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 12px;
 }
 
 .home__description {

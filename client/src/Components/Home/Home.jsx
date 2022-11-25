@@ -30,7 +30,7 @@ const Home = () => {
               <span className="item">
                 <h2>{value.itemname}</h2>
                 <h3>{value.price} €</h3>
-                <p>{value.description}</p>
+                <a href={value.itemname} className="buy">See more</a>
               </span>
             );
           })}

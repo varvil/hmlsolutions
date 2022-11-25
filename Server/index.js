@@ -57,8 +57,8 @@ app.get("/api/items", (req, res) => {
   const sql = "SELECT * FROM items";
 
   db.all(sql, (err, result) => {
-    res.send(result)
-  })
+    res.send(result);
+  });
 });
 
 app.listen(5000, () => {
