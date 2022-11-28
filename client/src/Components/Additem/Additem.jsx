@@ -14,10 +14,10 @@ const Additem = () => {
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
         name: name,
-        price: price,
-      }),
-    });
-    console.log({ name, price });
+        price: price
+      })
+      })
+      console.log({name, price})
   };
 
   return (
