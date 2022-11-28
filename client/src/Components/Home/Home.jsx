@@ -27,7 +27,7 @@ const Home = () => {
         <div className="item__section">
           {items.map((item) => {
             return (
-              <span>
+              <span key={item.id}>
                 {item.nimi} <br></br>
                 {item.hinta} € <br></br>
                 <a href={item.nimi}>Read more</a>

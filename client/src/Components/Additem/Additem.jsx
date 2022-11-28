@@ -1,20 +1,23 @@
 import React from "react";
 import { useState } from "react";
-import Axios from "axios";
 
 const Additem = () => {
-  const [itemname, setItemname] = useState("");
+  const [name, setName] = useState("");
   const [price, setPrice] = useState(0);
-  const [description, setDescription] = useState("");
 
-  const addItem = () => {
-    Axios.post("http://localhost:5000/PHP/index.php", {
-      itemname: itemname,
-      price: price,
-      description: description,
-    }).then(() => {
-      console.log("Success");
+  const addItem = (e) => {
+    e.preventDefault();
+
+    fetch("https://hmlsolutions.com/cloud13/project/api/put_send.php?", {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        name: name,
+        price: price,
+      }),
     });
+    console.log({ name, price });
   };
 
   return (
@@ -23,7 +26,7 @@ const Additem = () => {
       <input
         type="text"
         onChange={(e) => {
-          setItemname(e.target.value);
+          setName(e.target.value);
         }}
       />
       price{" "}
@@ -31,13 +34,6 @@ const Additem = () => {
         type="number"
         onChange={(e) => {
           setPrice(e.target.value);
-        }}
-      />
-      Description{" "}
-      <input
-        type="text"
-        onChange={(e) => {
-          setDescription(e.target.value);
         }}
       />
       <button onClick={addItem}>Submit</button>
