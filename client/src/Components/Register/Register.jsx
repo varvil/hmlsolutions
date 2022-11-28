@@ -28,7 +28,7 @@ const Register = () => {
           Please login with your personal info
         </h3>
 
-        <Link to="/cloud13/build/login" className="login">
+        <Link to="/cloud13/project/build/login" className="login">
           {" "}
           Sign in
         </Link>

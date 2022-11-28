@@ -13,11 +13,11 @@ function App() {
       <Navbar />
 
       <Routes>
-        <Route path="/cloud13/build" element={<Home />} />
+      <Route path="/cloud13/project/build" element={<Home />} />
         <Route index element={<Home />} />
-        <Route path="/cloud13/build/login" element={<Login />} />
-        <Route path="/cloud13/build/register" element={<Register />} />
-        <Route path="/cloud13/build/add" element={<Additem />} />
+        <Route path="/cloud13/project/build/login" element={<Login />} />
+        <Route path="/cloud13/project/build/register" element={<Register />} />
+        <Route path="/cloud13/project/build/add" element={<Additem />} />
         <Route path="*" element={<Nopage />} />
       </Routes>
     </>

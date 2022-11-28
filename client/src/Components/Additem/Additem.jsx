@@ -8,7 +8,7 @@ const Additem = () => {
   const [description, setDescription] = useState("");
 
   const addItem = () => {
-    Axios.post("http://localhost:5000/add", {
+    Axios.post("http://localhost:5000/PHP/index.php", {
       itemname: itemname,
       price: price,
       description: description,
