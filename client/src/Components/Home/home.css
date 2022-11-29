@@ -6,7 +6,7 @@
 
 .home__section {
     display: grid;
-    grid-template-columns: 500px 800px;
+    grid-template-columns: 600px 500px;
     justify-content: center;
 }
 
@@ -38,12 +38,15 @@
 }
 
 .item__section h2 {
+    margin-top: 1rem;
     font-size: 15px;
+    padding: 0;
 }
 
 .item__section h3 {
-    margin-bottom: 2rem;
-    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
     font-weight: lighter;
 }
 
@@ -55,11 +58,12 @@
 .buy {
     display: inline-block;
     width: 100px;
-    padding: 7px;
+    padding: 5px;
+    margin-top: 2rem;
     border-radius: 25px;
     text-decoration: none;
     color: #FFFF;
-    background: #1abc9c;
+    background: #515151;
     letter-spacing: 2px;
     text-transform: uppercase;
     font-size: 12px;

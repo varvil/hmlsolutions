@@ -1,5 +1,6 @@
 import React from "react";
 import "./home.css";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
 
@@ -27,10 +28,10 @@ const Home = () => {
         <div className="item__section">
           {items.map((item) => {
             return (
-              <span key={item.id}>
-                {item.nimi} <br></br>
-                {item.hinta} € <br></br>
-                <a href={item.nimi}>Read more</a>
+              <span className="item" key={item.id}>
+                <h2>{item.nimi}</h2>
+                <h3>{item.hinta} €</h3>
+                <Link className="buy" to={`/cloud13/project/build/item/${item.id}`}>See more</Link>
               </span>
             );
           })}

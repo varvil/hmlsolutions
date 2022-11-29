@@ -6,7 +6,7 @@ import Nopage from "./Components/Nopage/Nopage";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar";
 import Additem from "./Components/Additem/Additem";
-
+import Item from "./Components/Item/Item";
 
 
 function App() {
@@ -18,6 +18,7 @@ function App() {
       <Routes>
       <Route path="/cloud13/project/build" element={<Home />} />
         <Route index element={<Home />} />
+        <Route path="/cloud13/project/build/item/:id" element={<Item />} />
         <Route path="/cloud13/project/build/login" element={<Login />} />
         <Route path="/cloud13/project/build/register" element={<Register />} />
         <Route path="/cloud13/project/build/add" element={<Additem />} />

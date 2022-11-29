@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import "./additem.css";
 
 const Additem = () => {
   const [name, setName] = useState("");
@@ -14,29 +15,39 @@ const Additem = () => {
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
         name: name,
-        price: price
-      })
-      })
-      console.log({name, price})
+        price: price,
+      }),
+    });
+    console.log({ name, price });
   };
 
   return (
-    <div className="add__section">
-      Name{" "}
-      <input
-        type="text"
-        onChange={(e) => {
-          setName(e.target.value);
-        }}
-      />
-      price{" "}
-      <input
-        type="number"
-        onChange={(e) => {
-          setPrice(e.target.value);
-        }}
-      />
-      <button onClick={addItem}>Submit</button>
+    <div className="add__wrapper">
+      <h1>Add listing</h1>
+
+      <div className="input__container">
+        <div className="input__section">
+          <p>Name{" "}</p>
+          <input
+            required
+            type="text"
+            onChange={(e) => {
+              setName(e.target.value);
+            }}
+          />
+          <p>price{" "}</p>
+          <input
+          min={0}
+            required
+            className="input__number"
+            type="number"
+            onChange={(e) => {
+              setPrice(e.target.value);
+            }}
+          />
+          <button onClick={addItem}>Submit</button>
+        </div>
+      </div>
     </div>
   );
 };

@@ -1,0 +1,52 @@
+.add__wrapper {
+    margin: auto;
+    width: 100%;
+}
+
+.add__wrapper h1 {
+    color: #1abc9c;
+    padding: 20px;
+    text-align: center;
+}
+
+.input__container {
+    margin:auto;
+    height: 400px;
+    width: 500px;
+    border-radius: 25px;
+}
+
+.input__section {
+    text-align: center;
+}
+
+.input__section input {
+    margin: auto;
+    padding: 5px;
+    display: block;
+    border-radius: 20px;
+}
+
+.input__section p {
+    padding: 10px;
+    margin: 0;
+}
+
+.input__number {
+    width: 50px;
+}
+
+.input__section button {
+    width: 200px;
+    border-radius: 50px;
+    border: 0;
+    height: 30px;
+    margin-top: 2.5rem;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.input__section button:hover {
+    transition: 0.5s;
+    background: #1abc9c;
+}
