@@ -1,6 +1,6 @@
 .add__wrapper {
     margin: auto;
-    width: 100%;
+    width: 600px;
 }
 
 .add__wrapper h1 {
@@ -33,7 +33,7 @@
 }
 
 .input__number {
-    width: 50px;
+    width: 100px;
 }
 
 .input__section button {

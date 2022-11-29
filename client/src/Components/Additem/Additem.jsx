@@ -8,7 +8,7 @@ const Additem = () => {
 
   const addItem = (e) => {
     e.preventDefault();
-
+    
     fetch("https://hmlsolutions.com/cloud13/project/api/put_send.php?", {
       method: "POST",
       mode: "no-cors",
@@ -27,7 +27,7 @@ const Additem = () => {
 
       <div className="input__container">
         <div className="input__section">
-          <p>Name{" "}</p>
+          <p>Name </p>
           <input
             required
             type="text"
@@ -35,9 +35,9 @@ const Additem = () => {
               setName(e.target.value);
             }}
           />
-          <p>price{" "}</p>
+          <p>price </p>
           <input
-          min={0}
+            min={0}
             required
             className="input__number"
             type="number"

@@ -25,16 +25,22 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="item__section">
-          {items.map((item) => {
-            return (
-              <span className="item" key={item.id}>
-                <h2>{item.nimi}</h2>
-                <h3>{item.hinta} €</h3>
-                <Link className="buy" to={`/cloud13/project/build/item/${item.id}`}>See more</Link>
-              </span>
-            );
-          })}
+        <div className="item__section__right">
+            {items.map((item) => {
+              return (
+                <span className="item" key={item.id}>
+                  <i class="uil uil-layer-group"></i>
+                  <h1>{item.nimi}</h1>
+                  <p>{item.hinta} €</p>
+                  <Link
+                    className="buy"
+                    to={`/cloud13/project/build/item/${item.id}`}
+                  >
+                    See more
+                  </Link>
+                </span>
+              );
+            })}
         </div>
       </div>
     </div>
