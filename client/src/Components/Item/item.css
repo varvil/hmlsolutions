@@ -104,3 +104,29 @@ img {
     border: 1px solid #bc1a1a;
     cursor: pointer;
  }
+
+ .modify {
+    margin-top: 2.5rem;
+    margin-bottom: 3.5rem;
+ }
+
+ .oitem__photo a {
+    text-decoration: none;
+    outline: 0;
+    border: 0;
+    background: none;
+    border: 1px solid #d9d9d9;
+    padding: 15px;
+    font-size: 14px;
+    color: #515151;
+    text-transform: uppercase;
+    font-family: inherit;
+    margin-right: 5px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+ }
+
+ .oitem__photo a:hover {
+    border: 1px solid #eb12ff;
+    cursor: pointer;
+ }

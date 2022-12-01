@@ -1,0 +1,12 @@
+.hidden {
+    display:none;
+}
+
+.modify__container {
+    margin: auto;
+    text-align: center;
+}
+
+.modify__container h1 {
+    color: #1abc9c;
+}

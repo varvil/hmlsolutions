@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 import "./item.css";
 
 const Item = () => {
@@ -19,7 +19,11 @@ const Item = () => {
   const removeHandler = (e) => {
     e.preventDefault();
 
-    const path = "/cloud13/project/build/404";
+    setTimeout(function () {
+      window.location.reload();
+    });
+
+    const path = "/cloud13/project/build/";
     navigate(path);
 
     fetch(
@@ -38,7 +42,16 @@ const Item = () => {
   return (
     <div className="oitem__card">
       <div className="oitem__photo">
-        <button>Modify</button>
+
+        <div className="modify">
+        <Link
+          className="modify__button"
+          to={`/cloud13/project/build/modify/${item.id}`}
+        >
+          Modify
+        </Link>
+        </div>
+
         <button onClick={removeHandler}>Delete</button>
       </div>
 

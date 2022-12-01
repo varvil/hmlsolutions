@@ -18,8 +18,8 @@ const Home = () => {
     <div className="home__wrapper">
       <div className="home__section">
         <div className="home__content">
-          <h3 className="home__description">lorem ipsum lopsum</h3>
-          <h1 className="home__title">lorem larem</h1>
+          <h3 className="home__description">Unlimited items on</h3>
+          <h1 className="home__title">Grand exchange</h1>
 
           <div className="home__search">
             <i class="uil uil-layer-group"></i>

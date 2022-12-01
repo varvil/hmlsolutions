@@ -1,15 +1,23 @@
 import React from "react";
 import { useState } from "react";
-import "./additem.css";
+import { useParams, useNavigate } from "react-router-dom";
+import "./modify.css";
 
-const Additem = () => {
+const Modify = () => {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState(0);
+  const [id, setId] = useState(0);
+  const navigate = useNavigate();
+
   const [errorMessage, setErrorMessage] = React.useState("");
   const [successMessage, setSuccessMessage] = React.useState("");
 
-  const addItem = (e) => {
+  const params = useParams();
+
+  const iid = params.id;
+
+  const modifyItems = (e) => {
     e.preventDefault();
 
     if (name === "" || price === "") {
@@ -18,9 +26,9 @@ const Additem = () => {
         window.location.reload();
       }, 1000);
     } else {
-      setSuccessMessage("Item added successfully!");
+      setSuccessMessage(`item ID :` + iid + " modified");
 
-      fetch("https://hmlsolutions.com/cloud13/project/api/put_send.php?", {
+      fetch("https://hmlsolutions.com/cloud13/project/api/update_send.php?", {
         method: "POST",
         mode: "no-cors",
         headers: { "content-type": "application/json" },
@@ -28,9 +36,9 @@ const Additem = () => {
           name: name,
           price: price,
           description: description,
+          id: iid,
         }),
       });
-
       setTimeout(function () {
         window.location.reload();
       }, 1000);
@@ -38,23 +46,32 @@ const Additem = () => {
   };
 
   return (
-    <div className="add__wrapper">
-      <h1>Add listing</h1>
-
+    <div className="modify__container">
+      <h1>modify item</h1>
       {successMessage && <div className="success"> {successMessage} </div>}
       {errorMessage && <div className="error"> {errorMessage} </div>}
 
       <div className="input__container">
         <div className="input__section">
-          <p>Name </p>
+          <div className="hidden">
+            <input
+              value={iid}
+              className="this__is__going__to__be__hidden"
+              type="text"
+              onChange={(e) => {
+                setId(e.target.value);
+              }}
+            />
+          </div>
+
+          <p>New name </p>
           <input
-            required={true}
             type="text"
             onChange={(e) => {
               setName(e.target.value);
             }}
           />
-          <p>Description</p>
+          <p>New description</p>
           <input
             required
             className="description__text"
@@ -63,7 +80,7 @@ const Additem = () => {
               setDescription(e.target.value);
             }}
           />
-          <p>price </p>
+          <p>New price </p>
           <input
             min={0}
             required
@@ -73,11 +90,11 @@ const Additem = () => {
               setPrice(e.target.value);
             }}
           />
-          <button onClick={addItem}>Submit</button>
+          <button onClick={modifyItems}>Submit</button>
         </div>
       </div>
     </div>
   );
 };
 
-export default Additem;
+export default Modify;
