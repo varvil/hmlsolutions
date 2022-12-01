@@ -1,7 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import "./item.css";
 
 const Item = () => {
@@ -20,7 +19,7 @@ const Item = () => {
   const removeHandler = (e) => {
     e.preventDefault();
 
-    const path = '/cloud13/project/build/404';
+    const path = "/cloud13/project/build/404";
     navigate(path);
 
     fetch(
@@ -46,7 +45,7 @@ const Item = () => {
       <div className="oitem__description">
         <h2>{item.nimi}</h2>
         <h1>{item.hinta} €</h1>
-        <button>Add to Cart</button>
+        <p>Description: {item.description}</p>
       </div>
     </div>
   );

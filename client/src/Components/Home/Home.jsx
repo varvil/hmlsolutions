@@ -6,6 +6,7 @@ import { useEffect } from "react";
 
 const Home = () => {
   const [items, setItems] = useState([]);
+  const [inputText, setInputText] = useState("");
 
   useEffect(() => {
     fetch("https://hmlsolutions.com/cloud13/project/api/get_all.php")
@@ -19,28 +20,33 @@ const Home = () => {
         <div className="home__content">
           <h3 className="home__description">lorem ipsum lopsum</h3>
           <h1 className="home__title">lorem larem</h1>
+
           <div className="home__search">
-            <i class="uil uil-search"></i>
-            <input type="text" id="search__input" className="text" />
+            <i class="uil uil-layer-group"></i>
+            <input
+              type="text"
+              value={inputText}
+              onChange={(e) => setInputText(e.target.value)}
+            />
           </div>
         </div>
 
         <div className="item__section__right">
-            {items.map((item) => {
-              return (
-                <span className="item" key={item.id}>
-                  <i class="uil uil-layer-group"></i>
-                  <h1>{item.nimi}</h1>
-                  <p>{item.hinta} €</p>
-                  <Link
-                    className="buy"
-                    to={`/cloud13/project/build/item/${item.id}`}
-                  >
-                    See more
-                  </Link>
-                </span>
-              );
-            })}
+          {items.map((item) => {
+            return (
+              <span className="item" key={item.id}>
+                <i class="uil uil-layer-group"></i>
+                <h1>{item.nimi}</h1>
+                <p>{item.hinta} €</p>
+                <Link
+                  className="buy"
+                  to={`/cloud13/project/build/item/${item.id}`}
+                >
+                  See more
+                </Link>
+              </span>
+            );
+          })}
         </div>
       </div>
     </div>

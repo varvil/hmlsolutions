@@ -1,8 +1,29 @@
 import React from "react";
 import "./login.css";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Login = () => {
+
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  const loginHandler = (e) => {
+    e.preventDefault();
+
+    fetch("https://hmlsolutions.com/cloud13/project/api/login.php?", {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        username: username,
+        password: password,
+      }),
+    });
+    console.log({ username, password});
+
+  };
+
   return (
     <div className="login__container">
       <h1 className="login__title">Login</h1>
@@ -10,20 +31,26 @@ const Login = () => {
         <form className="login__form">
           <input
             type="text"
-            id="username"
+            id="usr_name"
             className="login__username"
             placeholder="Username"
+            onChange={(e) => {
+              setUsername(e.target.value);
+            }}
           />
           <div className="line"></div>
           <br></br>
           <input
             type="password"
-            id="password"
+            id="pwd"
             className="login__password"
             placeholder="Password"
+            onChange={(e) => {
+              setPassword(e.target.value);
+            }}
           />
           <div className="line"></div>
-          <button className="login">Sign in</button>
+          <button className="login" onClick={loginHandler}>Sign in</button>
         </form>
 
         {/*Remove socials I:s <p className="description">Or login with</p>

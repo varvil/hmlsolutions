@@ -24,7 +24,6 @@
     margin: auto;
     padding: 5px;
     display: block;
-    border-radius: 20px;
 }
 
 .input__section p {
@@ -49,4 +48,23 @@
 .input__section button:hover {
     transition: 0.5s;
     background: #1abc9c;
+}
+
+.success{
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 2rem;
+    color: green;
+    position: relative;
+    animation: buttons .3s linear;
+}
+
+.error{
+    text-align: center;
+    font-size: 20px;
+    color: red;
+    position: relative;
+    transition: .3s;
+    animation: buttons .3s linear;
+
 }
