@@ -4,11 +4,16 @@ import "./register.css";
 import { useState } from "react";
 import Axios from "axios";
 
+//Initialize states and variables
 const Register = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  /*Function to add user
+    This is also a bit unfinished but ready, user enters own information
+    and with post it will send to backend where it is put to the database
+  */
   const addUser = () => {
     Axios.post("http://localhost:5000/register", {
       username: username,

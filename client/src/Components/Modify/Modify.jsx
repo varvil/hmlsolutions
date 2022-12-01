@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "./modify.css";
 
+//Initialize states and variables
 const Modify = () => {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
@@ -13,10 +14,12 @@ const Modify = () => {
   const [errorMessage, setErrorMessage] = React.useState("");
   const [successMessage, setSuccessMessage] = React.useState("");
 
+  //Is used to return parameters from url. For example we used it to return id.
   const params = useParams();
 
   const iid = params.id;
 
+  //Function to modify items. Sends input data using post method to backend
   const modifyItems = (e) => {
     e.preventDefault();
 
@@ -63,7 +66,8 @@ const Modify = () => {
               }}
             />
           </div>
-
+          
+          {/* Input fields for new information */}
           <p>New name </p>
           <input
             type="text"

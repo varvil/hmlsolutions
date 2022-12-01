@@ -8,6 +8,10 @@ const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
+  /*Login is not ready yet but when it is it should work like that when user 
+    enters username and password, they are posted to backend where authentication is executed
+    and there is checked if username and password is found in the database and they are compared to input
+  */
   const loginHandler = (e) => {
     e.preventDefault();
 

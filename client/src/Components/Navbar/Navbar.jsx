@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./navbar.css";
 
+//For navigation bar information
 const Navbar = () => {
   return (
     <div className="nav__wrapper">
