@@ -38,6 +38,10 @@
 }
 
 /* For small devices */
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 400px) {
 
+    .nav__wrapper {
+        margin:auto;
+        text-align: center;
+    }
 }

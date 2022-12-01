@@ -67,3 +67,57 @@
     transition: .3s;
     animation: buttons .3s linear;
 }
+
+@media screen and (max-width: 576px) {
+
+    .add__wrapper {
+        margin: 0;
+        padding: 0;
+        width: 400px;
+    }
+
+    .add__wrapper h1 {
+        margin-left: 6rem;
+    }
+
+    .input__container {
+        text-align: center;
+    }
+
+    .success{
+        margin-left: 6rem;
+    }
+    
+    .error{
+        margin-left: 6rem;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+
+    .add__wrapper {
+        margin: auto;
+        text-align: center;
+    }
+
+    .add__wrapper h1 {
+        margin-left: 0;
+    }
+
+    .input__container {
+        margin: auto;
+    }
+
+    .input__section {
+        margin-right: 6rem;
+    }
+
+    .success{
+        margin-left: 0;
+    }
+    
+    .error{
+        margin-left: 0;
+    }
+}

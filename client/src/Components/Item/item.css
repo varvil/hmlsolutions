@@ -130,3 +130,38 @@ img {
     border: 1px solid #eb12ff;
     cursor: pointer;
  }
+
+ @media screen and (max-width: 576px) {
+
+   .oitem__card {
+      width: 350px;
+   }
+
+   .oitem__photo {
+      width: 75px;
+   }
+
+   .oitem__description {  
+      margin: auto;
+      width: 120px;
+   }
+
+   .oitem__description h2 {
+      font-size: 17px;
+   }
+
+   .oitem__description h1 {
+      font-size: 20px;
+   }
+
+   .oitem__photo button {
+      font-size: 10px;
+      width: 80px;
+   }
+
+   .oitem__photo a {
+      font-size: 10px;
+      padding: 20px;
+   }
+
+ }
